@@ -1,0 +1,15 @@
+@import 'assets/scss/now-ui-kit/_variables.scss';
+
+#navbar-brand.navbar-brand > img {
+    width:30px;
+    opacity:0;
+
+}
+
+nav.fixed-top.navbar.navbar-expand-lg.bg-info {
+    box-shadow: $box-shadow-raised;
+}
+
+nav.fixed-top.navbar.navbar-expand-lg.bg-info.navbar-transparent {
+    box-shadow: none;
+}

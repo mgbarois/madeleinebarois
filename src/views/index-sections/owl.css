@@ -1,0 +1,32 @@
+
+.owl-theme .item {
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+	margin-bottom: 20px;
+}
+
+.owl-theme .position {
+	color: black;
+	font-size:20px;
+}
+
+.owl-theme .company {
+    color: grey;
+    font-size: 18px;
+}
+
+.owl-theme .date{
+	color: gray;
+}
+
+.owl-theme a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+	opacity:0.6;
+}
+
+.owl-theme a:hover {
+    opacity: 0.5;
+}

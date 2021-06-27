@@ -1,0 +1,23 @@
+@import 'assets/scss/now-ui-kit/_variables.scss';
+
+.domain-containers {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+
+    .domain-container {
+        margin: 1rem;
+        cursor:pointer;
+        width: 130px;
+        border-radius:50%;
+        //background-color: black;
+        //box-shadow: $box-shadow-raised;
+        text-align: center;
+
+        img {
+            width:100%;
+            opacity: 0.5;
+        }
+    }
+    
+}

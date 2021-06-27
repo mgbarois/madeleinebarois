@@ -1,0 +1,64 @@
+@import 'assets/scss/now-ui-kit/_variables.scss';
+// https://gist.github.com/psd/2923224
+
+#carousel.portfolio-carousel {
+
+  .carousel-inner {
+    box-shadow: none !important;
+    overflow:visible;
+    
+  }
+
+  .iframe-wrapper {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    
+    iframe {
+      width: 80%;
+      margin:auto;
+      height:500px;
+      box-shadow: $box-shadow-raised;
+      border-radius: 0.1875rem;
+    }
+  }
+  
+  a.carousel-control-prev, a.carousel-control-next, a.carousel-control-next:focus, a.carousel-control-prev:focus {
+    // left: -80px;
+    font-size: 30px;
+    color: black;
+    opacity: .8;
+    i {
+      background-color: $light-gray;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: $box-shadow-raised;
+    }
+  }
+  a.carousel-control-next:hover, a.carousel-control-prev:hover {
+    color: black;
+    opacity: 1;
+  }
+
+  ol.carousel-indicators {
+    bottom: -50px;
+
+    li {
+    background-color: black;
+
+    }
+  }
+
+  .carousel-caption.d-none.d-md-block {
+    color: black;
+    .carousel-link-button {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+  }
+  .carousel-outer-caption {
+    width: 50%;
+  }
+}
