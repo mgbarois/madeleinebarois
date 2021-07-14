@@ -30,12 +30,20 @@ function Contact() {
       <div
         className="section section-contact"
         id="contact"
-        style={{
-          backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")",
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-          minHeight: "700px",
-        }}
+        // style={{
+        //   backgroundColor: '#1C1D21'
+
+        //     // backgroundImage: "url(" + require("assets/img/jonathan-borba-3o5oUjrD90w-unsplash_grad_rot.png") + ")",
+        //     // backgroundSize: "cover",
+        //     // backgroundPosition: "bottom center",
+        //     // minHeight: "700px"
+        // }}
+        // style={{
+        //   backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "top center",
+        //   minHeight: "700px",
+        // }}
       >
         <Container>
           <Row>

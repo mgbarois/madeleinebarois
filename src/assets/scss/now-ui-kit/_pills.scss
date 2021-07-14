@@ -26,7 +26,7 @@
     .nav-item {
         .nav-link{
           padding: $padding-btn-vertical - 1 $padding-round-horizontal;
-          background-color: $opacity-gray-3;
+          background-color: white; //$opacity-gray-3;
           min-width: 100px;
           font-weight: $font-weight-normal;
           text-align: center;
@@ -34,7 +34,7 @@
 
 
             &:hover{
-                background-color: $opacity-gray-3;
+                background-color: $opacity-gray-8; //$opacity-gray-3;
             }
 
             &.active{

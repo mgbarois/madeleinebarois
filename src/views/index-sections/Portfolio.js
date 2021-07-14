@@ -23,6 +23,8 @@ import {
 
 import './Portfolio.scss';
 import PortfolioCarousel from './PortfolioCarousel.js';
+import Contact from './Contact.js';
+
 
 
 const Portfolio = () => {
@@ -40,11 +42,11 @@ const Portfolio = () => {
     //   }, []);
     return (
         <>
-            <div className="section" id="portfolio">
+            <div className="section portfolio-section" id="portfolio">
                 <Container className='profile-page'>
                     <Row>
                         <Col className="ml-auto mr-auto" md="12">
-                            <h4 className="title text-center">Portfolio</h4>
+                            <h3 className="title text-center">Portfolio</h3>
                             <div className="nav-align-center">
                                 <Nav
                                     className="nav-pills-info nav-pills-just-icons"
@@ -55,6 +57,7 @@ const Portfolio = () => {
                                         <NavLink
                                             className={pills === "1" ? "active" : ""}
                                             href="#pablo"
+                                            style={{opacity:"1"}}
                                             onClick={(e) => {
                                                 e.preventDefault();
                                                 setPills("1");
@@ -104,61 +107,75 @@ const Portfolio = () => {
                             </TabPane>
                             <TabPane tabId="pills2">
                                 <Col className="ml-auto mr-auto" md="10">
-                                    <Row className="collections">
+                                    <Row className="collections codepen">
                                         <Col md="6">
-                                            <iframe height="265" className='img-raised' scrolling="no" title="Random Quote Machine" src="https://codepen.io/mgbarois/embed/preview/ExWPbWZ?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                                                See the Pen <a href='https://codepen.io/mgbarois/pen/ExWPbWZ'>Random Quote Machine</a> by mgbarois
-                                                (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                            </iframe>
-                                            <iframe height="265" className='img-raised' scrolling="no" title="Markdown Previewer" src="https://codepen.io/mgbarois/embed/preview/QWpyXyo?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                                                See the Pen <a href='https://codepen.io/mgbarois/pen/QWpyXyo'>Markdown Previewer</a> by mgbarois
-                                                (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                            </iframe>
+                                            <div class="thumbnail">
+                                                <iframe className='img-raised' scrolling="no" title="Random Quote Machine" src="https://codepen.io/mgbarois/embed/ExWPbWZ?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                                    See the Pen <a href='https://codepen.io/mgbarois/pen/ExWPbWZ'>Random Quote Machine</a> by mgbarois
+                                                    (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
+                                                </iframe>
+                                            </div>
+                                            <div class="thumbnail">
+
+                                                <iframe className='img-raised' scrolling="no" title="Markdown Previewer" src="https://codepen.io/mgbarois/embed/QWpyXyo?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                                    See the Pen <a href='https://codepen.io/mgbarois/pen/QWpyXyo'>Markdown Previewer</a> by mgbarois
+                                                    (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
+                                                </iframe>
+                                            </div>
                                         </Col>
                                         <Col md="6">
-                                            <iframe height="265" className='img-raised' scrolling="no" title="25 + 5 Clock" src="https://codepen.io/mgbarois/embed/preview/yLMJOKE?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                                                See the Pen <a href='https://codepen.io/mgbarois/pen/yLMJOKE'>25 + 5 Clock</a> by mgbarois
-                                                (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                            </iframe>
-                                            <iframe height="265" className='img-raised' scrolling="no" title="Javascript Calculator" src="https://codepen.io/mgbarois/embed/preview/eYvZjBY?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                                                See the Pen <a href='https://codepen.io/mgbarois/pen/eYvZjBY'>Javascript Calculator</a> by mgbarois
-                                                (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                            </iframe>
+                                            <div class="thumbnail">
+
+                                                <iframe className='img-raised' scrolling="no" title="25 + 5 Clock" src="https://codepen.io/mgbarois/embed/yLMJOKE?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                                    See the Pen <a href='https://codepen.io/mgbarois/pen/yLMJOKE'>25 + 5 Clock</a> by mgbarois
+                                                    (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
+                                                </iframe>
+                                            </div>
+                                            <div class="thumbnail">
+
+                                                <iframe className='img-raised' scrolling="no" title="Javascript Calculator" src="https://codepen.io/mgbarois/embed/eYvZjBY?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                                    See the Pen <a href='https://codepen.io/mgbarois/pen/eYvZjBY'>Javascript Calculator</a> by mgbarois
+                                                    (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
+                                                </iframe>
+                                            </div>
                                         </Col>
                                         <Col md="6">
-                                            <iframe height="265" className='img-raised' scrolling="no" title="Drum Machine" src="https://codepen.io/mgbarois/embed/preview/NWpNaXX?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                                                See the Pen <a href='https://codepen.io/mgbarois/pen/NWpNaXX'>Drum Machine</a> by mgbarois
-                                                (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
-                                            </iframe>
+                                            <div class="thumbnail">
+
+                                                <iframe className='img-raised' scrolling="no" title="Drum Machine" src="https://codepen.io/mgbarois/embed/NWpNaXX?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                                                    See the Pen <a href='https://codepen.io/mgbarois/pen/NWpNaXX'>Drum Machine</a> by mgbarois
+                                                    (<a href='https://codepen.io/mgbarois'>@mgbarois</a>) on <a href='https://codepen.io'>CodePen</a>.
+                                                </iframe>
+                                            </div>
                                         </Col>
                                     </Row>
                                 </Col>
                             </TabPane>
                             <TabPane tabId="pills3">
                                 <Col className="ml-auto mr-auto" md="10">
-                                    <Row className="collections">
-                                        <Col md="12">
+                                    <Row className="collections repl">
+                                        <Col md="6">
                                             <img
                                                 alt="..."
                                                 className="img-raised"
-                                                src={require("assets/img/bg3.jpg")}
+                                                src={require("assets/img/mr-cup-fabien-barral-o6GEPQXnqMY-unsplash.jpg")}
                                             ></img>
                                             <img
                                                 alt="..."
                                                 className="img-raised"
-                                                src={require("assets/img/bg8.jpg")}
+                                                src={require("assets/img/aron-visuals-BXOXnQ26B7o-unsplash.jpg")}
                                             ></img>
                                         </Col>
-                                        <Col md="12">
+                                        <Col md="6">
                                             <img
                                                 alt="..."
                                                 className="img-raised"
-                                                src={require("assets/img/bg7.jpg")}
+                                                src={require("assets/img/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg")}
                                             ></img>
                                             <img
                                                 alt="..."
                                                 className="img-raised"
-                                                src={require("assets/img/bg6.jpg")}
+                                                src={require("assets/img/markus-winkler-jid7TSoa02c-unsplash.jpg")}
                                             ></img>
                                         </Col>
                                     </Row>
@@ -167,6 +184,7 @@ const Portfolio = () => {
                         </TabContent>
                     </Row>
                 </Container>
+
             </div>
         </>
     )

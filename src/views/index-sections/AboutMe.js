@@ -1,83 +1,107 @@
 import React from "react";
-// react plugins that creates an input with a date picker
-// reactstrap components
+import { useTranslation } from 'react-i18next';
+
 import {
   Container,
-  UncontrolledTooltip
+  UncontrolledTooltip,
+  // Badge
 } from "reactstrap";
 
-import Domains from './Domains';
 
 import Slide from 'react-reveal/Slide';
 import Zoom from 'react-reveal/Zoom';
 
-
 import './AboutMe.scss';
 
-
-// core components
-
 function AboutMe() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="section section-about-me" id="about-me">
         <Container className='text-center'>
-          <h3 className="title">About Me</h3>
-          <p>Hi here, welcome to my website. I'm a web developer with a background in localization engineering and linguistics.
-            <br /> I combine creativity with analysis and problem solving to create solutions.</p>
-<div className="domain-containers">
-<Slide left >
-          <div className="domain-container" id='analysis-domain'>
-            <img
-              alt="..."
-              src={require("assets/img/loca_eng_gray.png")}
-            ></img>
-          </div>
-          <UncontrolledTooltip placement="bottom" target="analysis-domain" delay={0}>
-            Analysis and problem solving
-          </UncontrolledTooltip>
-          <div className="domain-container" id="linguistic-domain">
-            <img
-              alt="..."
-              src={require("assets/img/lang_gray.png")}
-            ></img>
-          </div>
-          <UncontrolledTooltip placement="bottom" target="linguistic-domain" delay={0}>
-            Linguistic and cultural knowledge
-          </UncontrolledTooltip>
-          </Slide>
-          <Zoom>
-          <img
-            alt="..."
-            className="rounded-circle img-raised"
-            style={{ maxWidth: '10rem', filter: 'grayscale(100%)' }}
-            src={require("assets/img/me.jpg")}
-          ></img>
-</Zoom>
-<Slide right>
-          <div className="domain-container" id="quality-domain">
-            <img
-              alt="..."
-              src={require("assets/img/web_gray.png")}
-            ></img>
-          </div>
-          <UncontrolledTooltip placement="bottom" target="quality-domain" delay={0}>
-            Quality and meticulousness
-          </UncontrolledTooltip>
-          <div className="domain-container" id="creativity-domain">
-            <img
-              alt="..."
-              src={require("assets/img/art_gray.png")}
-            ></img>
+          <h3 className="title">{t('aboutMe.title')}</h3>
+          <p>{t('aboutMe.text')}</p>
 
+          <div className="domain-containers">
+            <Slide left >
+              <div className="domain-container" id='analysis-domain'>
+                <img
+                  alt={t('aboutMe.domEngAlt')}
+                  src={require("assets/img/loca_eng_gray.png")}
+                ></img>
+              </div>
+              <UncontrolledTooltip placement="bottom" target="analysis-domain" delay={0}>
+                {t('aboutMe.domEngName')}
+              </UncontrolledTooltip>
+              <div className="domain-container" id="quality-domain">
+                <img
+                  alt={t('aboutMe.domWebAlt')}
+                  src={require("assets/img/web_gray.png")}
+                ></img>
+              </div>
+              <UncontrolledTooltip placement="bottom" target="quality-domain" delay={0}>
+                {t('aboutMe.domWebName')}
+              </UncontrolledTooltip>
+            </Slide>
+            <Zoom>
+              <img
+                alt={t('aboutMe.myPictureAlt')}
+                className="rounded-circle img-raised"
+                style={{ maxWidth: '10rem' }}
+                src={require("assets/img/me.jpg")}
+              ></img>
+            </Zoom>
+            <Slide right>
+              <div className="domain-container" id="linguistic-domain">
+                <img
+                  alt={t('aboutMe.domLangAlt')}
+                  src={require("assets/img/lang_gray.png")}
+                ></img>
+              </div>
+              <UncontrolledTooltip placement="bottom" target="linguistic-domain" delay={0}>
+                {t('aboutMe.domLangName')}
+              </UncontrolledTooltip>
+              <div className="domain-container" id="creativity-domain">
+                <img
+                  alt={t('aboutMe.domDesAlt')}
+                  src={require("assets/img/art_gray.png")}
+                ></img>
+              </div>
+              <UncontrolledTooltip placement="bottom" target="creativity-domain" delay={0}>
+                {t('aboutMe.domDesName')}
+              </UncontrolledTooltip>
+            </Slide>
           </div>
-          <UncontrolledTooltip placement="bottom" target="creativity-domain" delay={0}>
-            Creativity and design
-          </UncontrolledTooltip>
-          </Slide>
+          {/* <div className="badges-container">
+            <div className="domain-badges">
+              <Badge color="success">Web development</Badge>
+              <Badge color="success">Software engineering</Badge>
+              <Badge color="success">Localization</Badge>
+              <Badge color="success">Linguistics</Badge>
+            </div>
+            <div className="domain-badges">
+            <Badge color="info">Problem solving</Badge>
+            <Badge color="info">Pattern recognition</Badge>
+            <Badge color="info">Debugging</Badge>
+            <Badge color="info">Design</Badge>
+            <Badge color="info">Customer service</Badge>
+            <Badge color="info">Leadership</Badge>
           </div>
+          <div className="domain-badges">
+
+            <Badge color="primary">Resourceful</Badge>
+            <Badge color="primary">Creative</Badge>
+            <Badge color="primary">Autonomous</Badge>
+            <Badge color="primary">Hardworking</Badge>
+            <Badge color="primary">Observant</Badge>
+            <Badge color="primary">Attentive</Badge>
+            <Badge color="primary">Analytical</Badge>
+            <Badge color="primary">Meticulous</Badge>
+            <Badge color="primary">Friendly</Badge>
+          </div>
+      </div> */}
         </Container>
-    </div>
+      </div>
     </>
   );
 }

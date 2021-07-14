@@ -1,0 +1,73 @@
+@import 'assets/scss/now-ui-kit/_variables.scss';
+
+// .main-stack-title {
+//     text-align:center;
+//     margin-bottom: 2rem;
+//     h4 {
+//         margin-top:0;
+//     }
+// }
+
+.skill-stack {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    .tool-icon {
+
+        width: 45px;
+        height: 45px;
+        // opacity: .5;
+        // border: solid gray 1px;
+        padding:.3rem;
+        margin: .3rem;
+        border-radius: .5vh;
+    
+    
+            // filter: grayscale(100%);
+        i {
+            font-size: 30px;
+        }
+        img {
+            width:100%;
+        }
+        &:hover {
+            transform: scale(1.3);
+            opacity: .7;
+            transition: all .3s ease-in-out;
+        }
+    
+    }
+
+    .tool-name {
+        margin:0;
+        padding:0;
+        display: block;
+        margin-left: 2rem;
+    }
+
+    .loc-tasks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    
+}
+
+@media screen and (max-width:767px) {
+    .skill-stack {
+        justify-content: flex-start; 
+        padding-bottom: 0;
+        padding-top: 0;
+        .loc-tasks {
+            margin-top: 1rem;
+            width: 100%;
+        }
+    }
+
+    
+}

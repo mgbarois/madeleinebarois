@@ -30,7 +30,18 @@
                 -ms-transform:     scale(1.3);
                 -o-transform:      scale(1.3);
                 transform:         scale(1.3);
-                transition: all 0.5s ease-in-out;
+                transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .badges-container {
+        margin-top: 1rem;
+        .badge {
+            margin:.3rem;
+            opacity:0.5;
+            &:hover {
+                opacity:1;
+            }
         }
     }
         

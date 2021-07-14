@@ -18,23 +18,23 @@ import './PortfolioCarousel.scss'
 const items = [
   {
     src: "https://blogdown-poc.netlify.app/",
-    title: "Nsombou Abalghe-Dzal Association",
-    caption: "Nsombou Abalghe-Dzal Association",
+    title: "Nsombou Abalghe-Dzal Association Website",
+    tech: "blogdown, scss",
   },
   {
     src: "https://clarifaiapp.herokuapp.com/",
     title: "Clarifai Facial Recognition App",
-    // caption: "Clarifai Facial Recognition App",
+    tech: "React, Node.js, PostgeSQL, Clarifai API",
   },
   {
     src: "https://mgbarois.github.io/german-cheatsheet/",
     title: "German Cheat-Sheet",
-    // caption: "German Cheat-Sheet",
+    tech: "React, Bootstrap, LinguaTools API",
   },
   {
     src: "https://mgbarois.github.io/robofriends/",
     title: "Robofriends",
-    // caption: "Robofriends",
+    tech: "React",
   },
 ];
 
@@ -93,17 +93,22 @@ function PortfolioCarousel() {
                         <h5>{item.caption}</h5>
                       </div> */}
                       
-                <div className="carousel-caption d-none d-md-block">
-                  <a href={item.websiteLink} target="_blank">
-                    <Button className="btn-round btn-icon carousel-link-button" color="info" size="lg">
+                <div className="carousel-outer-caption">
+                  <div className="carousel-outer-title">
+                    <p><span className="title">{item.title}</span> | <span className="tech"> {item.tech}   </span><a href={item.websiteLink} target="_blank">
+                    <Button className="btn-round btn-icon carousel-link-button" color="info" size="sm">
                       <i class="fas fa-external-link-square-alt" />
                     </Button>
                   </a>
                   <a href={item.githubLink} target="_blank">
-                    <Button className="btn-round btn-icon carousel-link-button" color="info"size="lg">
+                    <Button className="btn-round btn-icon carousel-link-button" color="info"size="sm">
                       <i className="fab fa-github" />
                     </Button>
-                  </a>
+                  </a></p>
+                  </div>
+                  {/* <div className="carousel-outer-links">
+                  <p></p>
+                  </div> */}
                 </div>
                 </div>
               </CarouselItem>

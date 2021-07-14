@@ -1,12 +1,7 @@
-/*eslint-disable*/
 import React from "react";
-
-// reactstrap components
 import { Container } from "reactstrap";
-
-
+import { useTranslation } from 'react-i18next';
 import Zoom from 'react-reveal/Zoom';
-import AboutMe from '../../views/index-sections/AboutMe';
 
 function IndexHeader() {
   let pageHeader = React.createRef();
@@ -25,6 +20,7 @@ function IndexHeader() {
     }
   });
 
+  const { t } = useTranslation();
   return (
     <>
       <div className="page-header clear-filter" filter-color="blue">
@@ -36,42 +32,17 @@ function IndexHeader() {
           ref={pageHeader}
         ></div>
         <Container>
-        
           <div className="content-center brand">
-          
-            <img
-              alt="..."
-              className="n-logo"
-              src={require("assets/img/logo_circuit_white.png")}
-            />
-            
-            <h1 className="h1-seo">Madeleine Barois</h1>
-            <h3>Web developer & Localization Engineer</h3>
+            <Zoom>
+              <img
+                alt="..."
+                className="n-logo"
+                src={require("assets/img/logo_circuit_white.png")}
+              />
+              <h1 className="h1-seo">Madeleine Barois</h1>
+              <h3>{t("indexHeader.subtitle")}</h3>
+            </Zoom>
           </div>
-          
-          {/* <h6 className="category category-absolute">
-            Designed by{" "}
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
-              <img
-                alt="..."
-                className="invision-logo"
-                src={require("assets/img/invision-white-slim.png")}
-              ></img>
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nukr-index-header"
-              target="_blank"
-            >
-              <img
-                alt="..."
-                className="creative-tim-logo"
-                src={require("assets/img/creative-tim-white-slim2.png")}
-              ></img>
-            </a>
-            .
-          </h6> */}
-          
         </Container>
       </div>
     </>

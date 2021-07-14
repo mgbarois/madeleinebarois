@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
-// reactstrap components
 import {
-  Button,
   Collapse,
   DropdownToggle,
   DropdownMenu,
@@ -20,15 +19,10 @@ import {
 
 import './IndexNavBar.scss';
 
-
-
-import { useTranslation } from 'react-i18next';
-
 const lngs = {
   en: { nativeName: 'English' },
   fr: { nativeName: 'Français' },
   de: { nativeName: 'Deutsch' }
-
 };
 
 function IndexNavbar() {
@@ -70,7 +64,7 @@ function IndexNavbar() {
       <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
         <Container>
           <div className="navbar-translate">
-          
+
             <NavbarBrand
               href="./../../index"
               id="navbar-brand"
@@ -106,7 +100,7 @@ function IndexNavbar() {
                   onClick={(e) => e.preventDefault()}
                 >
                   {/* <i className="now-ui-icons users_circle-08 mr-1"></i> */}
-                  <p>My Profile</p>
+                  <p>{t("indexNavBar.myProfile")}</p>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem tag={Link} onClick={(e) => {
@@ -121,7 +115,7 @@ function IndexNavbar() {
                   <DropdownItem tag={Link} onClick={(e) => {
                     e.preventDefault();
                     document
-                      .getElementById("skillset")
+                      .getElementById("tabs-section")
                       .scrollIntoView();
                   }}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
@@ -130,7 +124,7 @@ function IndexNavbar() {
                   <DropdownItem tag={Link} onClick={(e) => {
                     e.preventDefault();
                     document
-                      .getElementById("education")
+                      .getElementById("tabs-section")
                       .scrollIntoView();
                   }}>
                     <i className="now-ui-icons education_hat mr-1"></i>
@@ -167,15 +161,15 @@ function IndexNavbar() {
               </UncontrolledDropdown>
               <NavItem>
                 <NavLink
-                  href="https://www.linkedin.com/madeleinebarois"
+                  href={t("indexNavBar.linkedinLink")}
                   target="_blank"
                   id="linkedin-tooltip"
                 >
                   <i className="fab fa-linkedin"></i>
-                  <p className="d-lg-none d-xl-none">GitHub</p>
+                  <p className="d-lg-none d-xl-none">Linkedin</p>
                 </NavLink>
                 <UncontrolledTooltip target="#linkedin-tooltip">
-                  Follow me on GitHub
+                  {t("indexNavBar.linkedinTooltip")}
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
@@ -188,7 +182,7 @@ function IndexNavbar() {
                   <p className="d-lg-none d-xl-none">GitHub</p>
                 </NavLink>
                 <UncontrolledTooltip target="#github-tooltip">
-                  Follow me on GitHub
+                  {t("indexNavBar.githubTooltip")}
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
@@ -201,7 +195,7 @@ function IndexNavbar() {
                   <p className="d-lg-none d-xl-none">CodePen</p>
                 </NavLink>
                 <UncontrolledTooltip target="#codepen-tooltip">
-                  Check out my CodePens
+                  {t("indexNavBar.codepenTooltip")}
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
@@ -210,11 +204,11 @@ function IndexNavbar() {
                   target="_blank"
                   id="replit-tooltip"
                 >
-                  <img className='tool-icon' src={require('assets/img/repl_white_crop.png')} alt='repl logo' style={{ width: '20px' }} />
-                  <p className="d-lg-none d-xl-none">Replit</p>
+                  <img className='repl-icon' src={require('assets/img/repl_white_crop.png')} alt='repl logo' style={{ width: '20px' }} />
+                  <p className="d-lg-none d-xl-none"><span> Replit</span></p>
                 </NavLink>
                 <UncontrolledTooltip target="#replit-tooltip">
-                  Check out my Repls
+                  {t("indexNavBar.replitTooltip")}
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
@@ -229,11 +223,11 @@ function IndexNavbar() {
                       aria-hidden={true}
                       className="fas fa-language"
                     ></i> */}
-                    <img src={require('assets/img/languages_white.png')} style={{ width: '20px' }} alt='language selector' />
+                    <img src={require('assets/img/languages_white.png')} style={{ width: '20px' }} alt={t("indexNavBar.langSelector")} />
                   </DropdownToggle>
                   <DropdownMenu right>
                     <DropdownItem header tag="a">
-                      Languages
+                      {t("indexNavBar.langs")}
                     </DropdownItem>
                     {Object.keys(lngs).map((lng) => (
                       <DropdownItem

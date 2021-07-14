@@ -1,4 +1,56 @@
-iframe {
-    height: 500px;
-    width: 100%;
+// .collections{
+    
+//     iframe {
+//     height: 500px;
+//     width: 100%;
+//     }
+// }
+
+@import 'assets/scss/now-ui-kit/_variables.scss';
+
+
+.portfolio-section {
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    background-image: url(("./../../assets/img/jonathan-borba-3o5oUjrD90w-unsplash_grad.png"));
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 700px;
+    // background-color: $light-gray;
+
+
+    .codepen {
+
+        .thumbnail {
+            width: 300px;
+            height: 160px;
+            margin-bottom: 100px;
+        }               
+
+        .thumbnail iframe {
+            width: 900px;
+            height: 480px;
+
+            -webkit-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            transform-origin: 0 0;
+
+            -webkit-transform:  scale(0.5, 0.5);
+            -moz-transform:  scale(0.5, 0.5);
+            transform:  scale(0.5, 0.5);
+
+            overflow: hidden;
+        }
+
+    }
+
+    .repl {
+        
+        .img-raised:hover {
+            transform: scale(1.05);
+            transition: all .2s ease-in-out;
+        }
+    }
+
 }

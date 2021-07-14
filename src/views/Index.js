@@ -26,7 +26,7 @@ import Examples from "./index-sections/Examples.js";
 import Download from "./index-sections/Download.js";
 // import BilliardsCarousel from "./index-sections/BilliardsCarousel.js";
 //import OwlyCarousel from "./index-sections/OwlyCarousel.js";
-import Employment from "./index-sections/Employment.js";
+import Experience from "./index-sections/Experience.js";
 import Domains from "./index-sections/Domains.js";
 import AboutMe from "./index-sections/AboutMe.js";
 import Portfolio from "./index-sections/Portfolio.js";
@@ -34,14 +34,7 @@ import PortfolioCarousel from "./index-sections/PortfolioCarousel.js";
 import Contact from "./index-sections/Contact.js";
 import ScrollButton from "./index-sections/ScrollButton.js";
 
-
-
-
-
 import './index.scss';
-
-
-import Fade from 'react-reveal/Fade';
 
 
 
@@ -64,16 +57,9 @@ function Index() {
       <div className="wrapper">
         <IndexHeader />
         <div className="main long">
-
-          {/* Cards: Web developer, localisation engineer, language specialist*/}
-          {/* About me */}
-          {/* Skill set */}
-          {/* Work experiennce */}
-          {/*Please contact me to request my cv */}
-          
           <AboutMe />    
           <Tabs />
-          <Employment />
+          <Experience />
           <Portfolio />
           {/* <Carousel /> */}
           <Contact />
