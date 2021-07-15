@@ -50,7 +50,7 @@ i18n
           skills: {
             title: "SKILLSET",
             dev: "Development",
-            loc: "Localization",
+            loc: "Localization & Languages",
             other: "Other",
             locTasks : [
               "File manipulation/processing",
@@ -133,8 +133,6 @@ i18n
                 link: "https://www.acolad.com/",
                 logo: "chacunsoncourt_logo.jpg"
               },
-            ],
-            other: [
               {
                 title: "English & French Instructor",
                 company: "Berlitz",
@@ -160,7 +158,6 @@ i18n
                 logo: "moa_logo.png"
               },
             ]
-
           },
           portfolio: {
             title: "PORTFOLIO"

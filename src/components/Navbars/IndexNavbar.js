@@ -22,7 +22,7 @@ import './IndexNavBar.scss';
 const lngs = {
   en: { nativeName: 'English' },
   fr: { nativeName: 'Français' },
-  de: { nativeName: 'Deutsch' }
+  // de: { nativeName: 'Deutsch' }
 };
 
 function IndexNavbar() {

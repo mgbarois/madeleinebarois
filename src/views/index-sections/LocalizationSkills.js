@@ -2,11 +2,12 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 
 import {
-  Progress
+  Progress,
+  Badge
 } from "reactstrap";
 
 import './SkillStackProgress.scss';
-import './SkillStackBox.scss';
+// import './SkillStackBox.scss';
 
 const skillsLocalization = [
   {
@@ -56,11 +57,13 @@ const LocalizationSkills = () => {
   console.log(t('skills.locTasks'));
   return (
     <>
+
       <div className="skill-stack">
         <div className="skills-col">
+          <p className="skill-title">Localization Tools:</p>
           {skillsLocalization.map((skill) => {
             return (
-              <div className="progress-container progress-info">
+              <div className="progress-container progress-success">
                 <span className="progress-badge"> <span style={{ color: "gray" }}><div className="tool-icon">{skill.icon}</div>{skill.name}</span></span>
                 <Progress max="100" value={skill.level} style={{ height: "3px", backgroundColor: "#F5F5F5" }} >
                 </Progress>
@@ -69,39 +72,27 @@ const LocalizationSkills = () => {
           })}
         </div>
 
-        <div className="loc-tasks">
-          <ul>
-            {
-              t('skills.locTasks').map(task => {
-                return (<li><p>{task}</p></li>)
-              })
-            }
-          </ul>
-        </div>
+        <div className="skills-col">
+          <p className="skill-title">Localization Tasks:</p>
+          <div className="loc-tasks">
+            <ul>
+              {
+                t('skills.locTasks').map(task => {
+                  return (<li><p>{task}</p></li>)
+                })
+              }
+            </ul>
+          </div>
+          <p className="skill-title">Human Languages:</p>
+          <div className="langs">
+
+            <div className="lang"><div>English</div><Badge color="success">Native</Badge></div>
+            <div className="lang"><div>French</div><Badge color="success">Native</Badge></div>
+            <div className="lang"><div>Spanish</div><Badge color="success">B2.2</Badge></div>
+            <div className="lang"><div>German</div><Badge color="success">B1.1</Badge></div>
 
 
-        {/* <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {skillsLocalization.map((skill) => {
-            return (
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
-                <div className="tool-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{skill.icon}</div>
-                <p className="tool-name" style={{ marginLeft: '2rem' }}>{skill.name}</p>
-              </div>
-            );
-          })}
-        </div>
-        <div className="loc-tasks">
-          <ul>
-            {
-              t('skills.locTasks').map(task => {
-                return (<li><p>{task}</p></li>)
-              })
-            }
-          </ul>
-        </div> */}
-      </div>
-      <div class="langs">
-            <h3><i class="fa fa-language"></i>Languages</h3>
+            {/* <h3><i class="fa fa-language"></i>Languages</h3>
             <div class="skills-soft">
               <ul>
                 <li data-percent="100">
@@ -133,8 +124,32 @@ const LocalizationSkills = () => {
                   </svg><span>B1</span><small></small>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
+        </div>
+
+
+        {/* <div style={{ display: 'flex', flexDirection: 'column' }}>
+          {skillsLocalization.map((skill) => {
+            return (
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
+                <div className="tool-icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{skill.icon}</div>
+                <p className="tool-name" style={{ marginLeft: '2rem' }}>{skill.name}</p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="loc-tasks">
+          <ul>
+            {
+              t('skills.locTasks').map(task => {
+                return (<li><p>{task}</p></li>)
+              })
+            }
+          </ul>
+        </div> */}
+      </div>
+
     </>
   )
 }

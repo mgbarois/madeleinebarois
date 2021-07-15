@@ -63,7 +63,7 @@ function Tabs() {
                           setIconPills("2");
                         }}
                       >
-                        <i className="now-ui-icons business_globe"></i>
+                        <img src={require('assets/img/languages_white.png')} style={{ width: '20px', marginRight:"3px" }} alt={t("indexNavBar.langSelector")} />
                         {t('skills.loc')}
                       </NavLink>
                     </NavItem>
