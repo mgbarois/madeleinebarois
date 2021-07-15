@@ -71,7 +71,7 @@ i18n
             caweb: "CAWEB Master's",
             cawebLink: "https://mastercaweb.u-strasbg.fr/?lang=en",
             unistra: "University of Strasbourg",
-            pluri: "Plurilingualism & Interculturality Master's (First year)",
+            pluri: "Multilingualism & Interculturality Master's (First year)",
             ling: "Bacherlor's in Linguistics",
             ubc: "University of British Columbia",
             ztmCourse: "The Complete Web Developer in 2021",
@@ -128,7 +128,7 @@ i18n
               {
                 title: "Web Project Manager",
                 location: "Strasbourg, France",
-                company: "Acolad Group",
+                company: "Chacun Son Court",
                 dates: "2016-2017",
                 link: "https://www.acolad.com/",
                 logo: "chacunsoncourt_logo.jpg"
@@ -184,13 +184,162 @@ i18n
       fr: {
         translation: {
           indexNavBar: {
-            myProfile: 'Mon Profil'
+            myProfile: 'Mon Profil',
+            linkedinLink: "https://www.linkedin.com/in/madeleine-barois/fr",
+            linkedinTooltip: "Suivez-moi sur Linkedin",
+            githubTooltip: "Suivez-moi sur GitHub",
+            codepenTooltip: "Allez voir mes Codepens",
+            replitTooltip: "Allez voir mes Repls",
+            langSelector: "Choix de langues",
+            langs: "Langues",
           },
           indexHeader: {
-            subtitle: "Développeuse web & ingénieure pour la localisation"
+            subtitle: 'Développeuse web & Ingénieure pour la Localisation'
           },
-          basicElements: {
-            title: 'Élements basiques'
+          aboutMe: {
+            title: 'A PROPOS DE MOI',
+            text: "Bonjour, bienvenue sur mon site web ! Je suis un développeur web avec une formation en linguistique. J'ai découvert ma passion pour le codage en travaillant comme ingénieur en localisation dans le secteur des services linguistiques, et je me suis depuis reconvertie dans le développement web full-stack. Je suis passionnée par la création, l'apprentissage de nouvelles choses et l'application de mes compétences multidisciplinaires pour analyser et résoudre des problèmes.",
+            myPictureAlt: "Madeleine Barois",
+            domEngName: "Analyse et résolution de problèmes",
+            domEngAlt: "Ingénierie",
+            domWebName: "Qualité et Rigueur",
+            domWebAlt: "Web",
+            domLangName: "Connaissances linguistiques et culturelles",
+            domLangAlt: "Langues",
+            domDesName: "Créativité et compétences design",
+            domDesAlt: "Design",
+          },
+          skills: {
+            title: "COMPÉTENCES",
+            dev: "Développement",
+            loc: "Localisation & Langues",
+            other: "Other",
+            locTasks : [
+              "Manipulation/traitement de fichiers",
+              "Configuration des outils de TAO",
+              "Développement et gestion des connecteurs/plugins de l'API SDL",
+              "Assistance technique, dépannage, débogage",
+              "Documentation des processus",
+            ],
+            jira: "Sytème de tickets Jira",
+            confluence: "Outil de documentation Confluence",
+            adobe: "Suite Adobe",
+
+          }, 
+          education: {
+            title: "FORMATION",
+            edu: "Éducation",
+            cert: "Certifications",
+            caweb: "Master CAWEB",
+            cawebLink: "https://mastercaweb.u-strasbg.fr/?lang=fr",
+            unistra: "Université de Strasbourg",
+            pluri: "Master I en Plurilingualisme & Interculturalité",
+            ling: "Bacherlor en Linguistique",
+            ubc: "Université de Colombie-Britannique",
+            ztmCourse: "The Complete Web Developer in 2021",
+            fccCert: "Certification FreeCodeCamp",
+            api: "APIs and Microservices",
+            frontend: "Front End Libraries",
+            javascript: "JavaScript Algorithms and data Structures",
+            csharp: "C# Intermediate: Classes, Interfaces and OOP",
+            csharpCourse: "Cours Udemy par Mosh Hamedani"
+          }, 
+          experience: {
+            title: "EXPÉRIENCE PROFESSIONNELLE",
+            relevant: [
+              {
+                title: "Développeuse Web sous contrat",
+                company: "Nsombou Abalghe-Dzal Association",
+                location: "À distance",
+                dates: "2021-Présent",
+                link: "https://blogdown-poc.netlify.app/",
+                logo: "NADA_logo.png"
+              },
+              {
+                title: "Ingénieure pour la localization",
+                company: "Acolad Group",
+                location: "Bruxelles, Belgium",
+                dates: "2018-2021",
+                link: "https://www.acolad.com/",
+                logo: "acolad.png"
+              },
+              {
+                title: "Apprentie Ingénieure pour la localization",
+                company: "Telelingua International",
+                location: "Paris, France",
+                dates: "2017-2018",
+                link: "https://www.acolad.com/",
+                logo: "telelingua_logo.png"
+              },
+              {
+                title: "Rédactrice de règles sémantiques (mi-temps)",
+                company: "SmartKYC",
+                location: "À distance",
+                dates: "2016-2017",
+                link: "https://smartkyc.com/",
+                logo: "smartkyc_logo.png"
+              },
+              {
+                title: "Responsable adjointe du contenu Web",
+                location: "Strasbourg, France",
+                company: "Master TCLoc",
+                dates: "2016-2017",
+                link: "https://mastertcloc.unistra.fr/",
+                logo: "tcloc_logo.png"
+              },
+              {
+                title: "Chef de projet web",
+                location: "Strasbourg, France",
+                company: "Chacun Son Court",
+                dates: "2016-2017",
+                link: "",
+                logo: "chacunsoncourt_logo.jpg"
+              },
+              {
+                title: "Enseignante d'anglais et de français",
+                company: "Berlitz",
+                location: "Cologne, Germany & Strasbourg, France",
+                dates: "2014-2016",
+                link: "https://www.acolad.com/",
+                logo: "berlitz_logo.jpg"
+              },
+              {
+                title: "Assistante de recherche en linguistique",
+                company: "Université de Colombie-Britannique",
+                location: "Vancouver, Canada",
+                dates: "2013-2014",
+                link: "https://linguistics.ubc.ca/",
+                logo: "ubc_logo.jpg"
+              },
+              {
+                title: "Guide touristique multilingue",
+                company: "UBC Museum of Anthropology",
+                location: "Vancouver, Canada",
+                dates: "2012-2014",
+                link: "https://www.acolad.com/",
+                logo: "moa_logo.png"
+              },
+            ]
+          },
+          portfolio: {
+            title: "PORTFOLIO"
+          },
+          contact: {
+
+          },
+          month: {
+            jan: "Janvier",
+            feb: "Février",
+            mar: "Mars",
+            apr: "Avril",
+            may: "Mai",
+            jun: "Juin",
+            jul: "Juillet",
+            aug: "Août",
+            sep: "Septembre",
+            oct: "Octorbre",
+            nov: "Novembre",
+            dec: "Décembre"
           }
         }
       },
