@@ -3,13 +3,6 @@ import React from 'react';
 // reactstrap components
 import {
     Button,
-    Collapse,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledDropdown,
-    NavbarBrand,
-    Navbar,
     NavItem,
     NavLink,
     Nav,
@@ -18,13 +11,29 @@ import {
     Col,
     TabContent,
     TabPane,
-    UncontrolledTooltip,
+    Card,
+    CardHeader,
+    CardBody,
 } from "reactstrap";
 
 import './Portfolio.scss';
 import PortfolioCarousel from './PortfolioCarousel.js';
-import Contact from './Contact.js';
 
+const ReplItem = ({ id, name, link }) => {
+    return (
+        <a className="carousel-outer-link" href={link} target="_blank" rel="noopener noreferrer">
+            <Card className="repl-card">
+                <CardHeader id={id} className="repl-header"></CardHeader>
+                <CardBody className="repl-container">
+                    <p>{name}
+                        <Button className="btn-round btn-icon repl-link-button" color="primary" size="sm">
+                            <i className="fas fa-external-link-square-alt" />
+                        </Button></p>
+                </CardBody>
+            </Card>
+        </a>
+    );
+};
 
 
 const Portfolio = () => {
@@ -49,7 +58,7 @@ const Portfolio = () => {
                             <h3 className="title text-center">Portfolio</h3>
                             <div className="nav-align-center">
                                 <Nav
-                                    className="nav-pills-info nav-pills-just-icons"
+                                    className="nav-pills-primary nav-pills-just-icons"
                                     pills
                                     role="tablist"
                                 >
@@ -57,7 +66,7 @@ const Portfolio = () => {
                                         <NavLink
                                             className={pills === "1" ? "active" : ""}
                                             href="#pablo"
-                                            style={{opacity:"1"}}
+                                            style={{ opacity: "1" }}
                                             onClick={(e) => {
                                                 e.preventDefault();
                                                 setPills("1");
@@ -155,28 +164,12 @@ const Portfolio = () => {
                                 <Col className="ml-auto mr-auto" md="10">
                                     <Row className="collections repl">
                                         <Col md="6">
-                                            <img
-                                                alt="..."
-                                                className="img-raised"
-                                                src={require("assets/img/mr-cup-fabien-barral-o6GEPQXnqMY-unsplash.jpg")}
-                                            ></img>
-                                            <img
-                                                alt="..."
-                                                className="img-raised"
-                                                src={require("assets/img/aron-visuals-BXOXnQ26B7o-unsplash.jpg")}
-                                            ></img>
+                                            <ReplItem id="exercise-tracker" name="Exercise Tracker" link="https://replit.com/@mgbarois/boilerplate-project-exercisetracker?v=1" />
+                                            <ReplItem id="file-metadata" name="File Metadata Retriever" link="https://replit.com/@mgbarois/boilerplate-project-filemetadata?v=1" />
                                         </Col>
                                         <Col md="6">
-                                            <img
-                                                alt="..."
-                                                className="img-raised"
-                                                src={require("assets/img/bruno-nascimento-PHIgYUGQPvU-unsplash.jpg")}
-                                            ></img>
-                                            <img
-                                                alt="..."
-                                                className="img-raised"
-                                                src={require("assets/img/markus-winkler-jid7TSoa02c-unsplash.jpg")}
-                                            ></img>
+                                            <ReplItem id="url-shortner" name="Url Shortener" link="https://replit.com/@mgbarois/boilerplate-project-urlshortener?v=1" />
+                                            <ReplItem id="timestamp-converter" name="Timestamp Converter" link="https://replit.com/@mgbarois/boilerplate-project-timestamp?v=1" />
                                         </Col>
                                     </Row>
                                 </Col>
@@ -185,7 +178,7 @@ const Portfolio = () => {
                     </Row>
                 </Container>
 
-            </div>
+            </div >
         </>
     )
 }

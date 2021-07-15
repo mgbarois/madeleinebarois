@@ -4,7 +4,11 @@ import { useTranslation } from 'react-i18next';
 import {
   Container,
   UncontrolledTooltip,
-  // Badge
+  Card,
+  CardBody,
+  CardHeader,
+  Row,
+  Col
 } from "reactstrap";
 
 
@@ -20,59 +24,90 @@ function AboutMe() {
       <div className="section section-about-me" id="about-me">
         <Container className='text-center'>
           <h3 className="title">{t('aboutMe.title')}</h3>
-          <p>{t('aboutMe.text')}</p>
+          <Row>
+            {/* <Col className="ml-auto mr-auto" md="10" lg="6">
+              <p>{t('aboutMe.text')}</p>
+            </Col>
+            <Col className="ml-auto mr-auto" md="10" lg="3">
+              
 
-          <div className="domain-containers">
-            <Slide left >
-              <div className="domain-container" id='analysis-domain'>
-                <img
-                  alt={t('aboutMe.domEngAlt')}
-                  src={require("assets/img/loca_eng_gray.png")}
-                ></img>
+                <Zoom>
+                  <img
+                    alt={t('aboutMe.myPictureAlt')}
+                    className="rounded-circle img-raised"
+                    style={{ maxWidth: '10rem' }}
+                    src={require("assets/img/me.jpg")}
+                  ></img>
+                </Zoom>
+             
+            </Col> */}
+            <Col className="ml-auto mr-auto" md="10" lg="8">
+              <Card id="about-me-card">
+                <CardHeader>
+                <Zoom>
+                    <img
+                      alt={t('aboutMe.myPictureAlt')}
+                      id="my-photo"
+                      className="rounded-circle img-raised"
+                      src={require("assets/img/me.jpg")}
+                    ></img>
+                  </Zoom>
+                </CardHeader>
+                <CardBody>
+                  <p>{t('aboutMe.text')}</p>
+                </CardBody>
+              </Card>
+              <div className="domain-containers">
+                <Slide left >
+                  <div className="domain-container" id='analysis-domain'>
+                    <img
+                      alt={t('aboutMe.domEngAlt')}
+                      src={require("assets/img/loca_eng_gray.png")}
+                    ></img>
+                  </div>
+                  <UncontrolledTooltip placement="bottom" target="analysis-domain" delay={0}>
+                    {t('aboutMe.domEngName')}
+                  </UncontrolledTooltip>
+                  <div className="domain-container" id="quality-domain">
+                    <img
+                      alt={t('aboutMe.domWebAlt')}
+                      src={require("assets/img/web_gray.png")}
+                    ></img>
+                  </div>
+                  <UncontrolledTooltip placement="bottom" target="quality-domain" delay={0}>
+                    {t('aboutMe.domWebName')}
+                  </UncontrolledTooltip>
+                </Slide>
+           <Slide right>
+                <div className="domain-container" id="linguistic-domain">
+                  <img
+                    alt={t('aboutMe.domLangAlt')}
+                    src={require("assets/img/lang_gray.png")}
+                  ></img>
+                </div>
+                <UncontrolledTooltip placement="bottom" target="linguistic-domain" delay={0}>
+                  {t('aboutMe.domLangName')}
+                </UncontrolledTooltip>
+                <div className="domain-container" id="creativity-domain">
+                  <img
+                    alt={t('aboutMe.domDesAlt')}
+                    src={require("assets/img/art_gray.png")}
+                  ></img>
+                </div>
+                <UncontrolledTooltip placement="bottom" target="creativity-domain" delay={0}>
+                  {t('aboutMe.domDesName')}
+                </UncontrolledTooltip>
+
+              </Slide>
               </div>
-              <UncontrolledTooltip placement="bottom" target="analysis-domain" delay={0}>
-                {t('aboutMe.domEngName')}
-              </UncontrolledTooltip>
-              <div className="domain-container" id="quality-domain">
-                <img
-                  alt={t('aboutMe.domWebAlt')}
-                  src={require("assets/img/web_gray.png")}
-                ></img>
-              </div>
-              <UncontrolledTooltip placement="bottom" target="quality-domain" delay={0}>
-                {t('aboutMe.domWebName')}
-              </UncontrolledTooltip>
-            </Slide>
-            <Zoom>
-              <img
-                alt={t('aboutMe.myPictureAlt')}
-                className="rounded-circle img-raised"
-                style={{ maxWidth: '10rem' }}
-                src={require("assets/img/me.jpg")}
-              ></img>
-            </Zoom>
-            <Slide right>
-              <div className="domain-container" id="linguistic-domain">
-                <img
-                  alt={t('aboutMe.domLangAlt')}
-                  src={require("assets/img/lang_gray.png")}
-                ></img>
-              </div>
-              <UncontrolledTooltip placement="bottom" target="linguistic-domain" delay={0}>
-                {t('aboutMe.domLangName')}
-              </UncontrolledTooltip>
-              <div className="domain-container" id="creativity-domain">
-                <img
-                  alt={t('aboutMe.domDesAlt')}
-                  src={require("assets/img/art_gray.png")}
-                ></img>
-              </div>
-              <UncontrolledTooltip placement="bottom" target="creativity-domain" delay={0}>
-                {t('aboutMe.domDesName')}
-              </UncontrolledTooltip>
-            </Slide>
-          </div>
-          {/* <div className="badges-container">
+
+              
+            </Col>
+
+
+
+
+              {/* <div className="badges-container">
             <div className="domain-badges">
               <Badge color="success">Web development</Badge>
               <Badge color="success">Software engineering</Badge>
@@ -100,10 +135,12 @@ function AboutMe() {
             <Badge color="primary">Friendly</Badge>
           </div>
       </div> */}
+
+          </Row>
         </Container>
       </div>
     </>
-  );
+      );
 }
 
-export default AboutMe;
+      export default AboutMe;

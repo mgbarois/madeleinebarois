@@ -19,6 +19,8 @@ import SkillStackProgress from "./SkillStackProgess";
 import LocalizationSkills from './LocalizationSkills';
 import {Education, Certifications} from "./Education"
 
+import "./Tabs.scss";
+
 function Tabs() {
   const [iconPills, setIconPills] = React.useState("1");
   const [pills, setPills] = React.useState("1");
@@ -65,7 +67,7 @@ function Tabs() {
                         {t('skills.loc')}
                       </NavLink>
                     </NavItem>
-                    <NavItem>
+                    {/* <NavItem>
                       <NavLink
                         className={iconPills === "3" ? "active" : ""}
                         href="#"
@@ -77,7 +79,7 @@ function Tabs() {
                         <i className="now-ui-icons design-2_ruler-pencil"></i>
                         {t('skills.other')}
                       </NavLink>
-                    </NavItem>
+                    </NavItem> */}
                   </Nav>
                 </CardHeader>
                 <CardBody>
@@ -94,13 +96,13 @@ function Tabs() {
                     <TabPane tabId="iconPills2">
                       <LocalizationSkills />
                     </TabPane>
-                    <TabPane tabId="iconPills3">
+                    {/* <TabPane tabId="iconPills3">
                       <ul>
                         <li><p>{t('skills.jira')}</p></li>
                         <li><p>{t('skills.confluence')}</p></li>
                         <li><p>{t('skills.adobe')}</p></li>
                       </ul>
-                    </TabPane>
+                    </TabPane> */}
                   </TabContent>
                 </CardBody>
               </Card>

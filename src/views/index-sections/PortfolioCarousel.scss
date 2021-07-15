@@ -3,6 +3,8 @@
 
 #carousel.portfolio-carousel {
 
+  
+
   .carousel-inner {
     box-shadow: none !important;
     overflow:visible;
@@ -11,6 +13,7 @@
 
   .iframe-wrapper {
     height: 600px;
+    margin-top: 0px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -39,6 +42,8 @@
     //font-size: 30px;
     // color: rgb(141, 141, 141);
     opacity: .8;
+    color: white;
+    width: 110px;
     
     // i {
     //   background-color: $light-gray;
@@ -62,6 +67,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
+    background-color: white;
 
     }
     li:hover {
@@ -79,18 +85,16 @@
     justify-content: center;
     color: white;
 
-.carousel-outer-title {
-text-align: center;
-    .title {
-      font-weight: bold;
-    }
-  }
-  .carousel-outer-links{
-
-      a {
-        margin-left: .5rem;
-
+    .carousel-outer-title {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+        .title {
+          font-weight: bold;
+        }
       }
+  .carousel-outer-link {
+        margin-left: .7rem;
     }
   }
 
@@ -111,7 +115,7 @@ text-align: center;
   }
 
   .carousel-outer-caption {
-  padding: 1.5rem;
+  padding: 2rem;
   }
 
   }

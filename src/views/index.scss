@@ -8,6 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 // h1, h2, h3, h4 {
 // //font-family: 'Overlock SC', cursive;
 //  }
@@ -19,6 +20,14 @@ h3.title  {
 
 body {
     // font-family: 'Overlock', cursive;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     // font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+h3.title {
+    font-weight: 400;
 }

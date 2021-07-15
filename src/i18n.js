@@ -35,8 +35,8 @@ i18n
             subtitle: 'Web developer & Localization Engineer'
           },
           aboutMe: {
-            title: 'About Me',
-            text: "Hi here, welcome to my website. I'm a self-taught web developer with a background in localization engineering and linguistics. I combine creativity with analysis and problem solving to create solutions. self-taught developper, diverse educational background, wide-ranging skillset",
+            title: 'ABOUT ME',
+            text: "Hi there, welcome to my website! I'm a self-taught web developer with a background in linguistics. I discovered my love for coding working as a localization engineer in the language services industry, and have since transitioned into full-stack web developement. I'm passionate about creating, learning new things, and applying my multidisciplinary skillset to analyze and solve problems.",
             myPictureAlt: "Madeleine Barois",
             domEngName: "Analysis and problem solving",
             domEngAlt: "Engineering",
@@ -44,11 +44,11 @@ i18n
             domWebAlt: "Web",
             domLangName: "Linguistic and cultural knowledge",
             domLangAlt: "Langs",
-            domDesName: "Creativity and design",
+            domDesName: "Creativity and design sensibility",
             domDesAlt: "Design",
           },
           skills: {
-            title: "Skillset",
+            title: "SKILLSET",
             dev: "Development",
             loc: "Localization",
             other: "Other",
@@ -65,7 +65,7 @@ i18n
 
           }, 
           education: {
-            title: "Education & Training",
+            title: "EDUCATION & TRAINING",
             edu: "Education",
             cert: "Certifications",
             caweb: "CAWEB Master's",
@@ -83,7 +83,7 @@ i18n
             csharpCourse: "Udemy course by Mosh Hamedani"
           }, 
           experience: {
-            title: "Professional Experience",
+            title: "PROFESSIONAL EXPERIENCE",
             relevant: [
               {
                 title: "Contracted Web Developer",
@@ -99,7 +99,7 @@ i18n
                 location: "Brussels, Belgium",
                 dates: "2018-2021",
                 link: "https://www.acolad.com/",
-                logo: "acolad_gray9.png"
+                logo: "acolad.png"
               },
               {
                 title: "Apprentice Localization Engineer",
@@ -113,7 +113,7 @@ i18n
                 title: "Semantic Rule Writer (part-time)",
                 company: "SmartKYC",
                 location: "Remote",
-                dates: "2017-2018 CHECK THIS",
+                dates: "2016-2017",
                 link: "https://smartkyc.com/",
                 logo: "smartkyc_logo.png"
               },
@@ -163,7 +163,7 @@ i18n
 
           },
           portfolio: {
-            
+            title: "PORTFOLIO"
           },
           contact: {
 

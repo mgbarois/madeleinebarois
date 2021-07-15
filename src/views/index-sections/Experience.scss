@@ -7,6 +7,7 @@
 
 div#experience.section {
     padding-bottom: 0px;
+    padding-top: 30px;
 
     .owl-carousel.owl-theme {
         button.owl-dot {
@@ -42,23 +43,21 @@ div#experience.section {
                 // // background-image: url("../../assets/img/jellyfish.jpg");
                 // background-size:cover;
                 // background-position: top center;
-
+                box-shadow: none;
 
                 .img-container{
-                    height: 156px;
-                    width:156px;
+                    height: 170px;
+                    width:170px;
                     display:flex;
                     align-items: center;
                     justify-content: center;
                     margin:auto;
-                    padding: 20px;
-                    border: $dark-gray 1px solid;
-                    border-radius: 50%;
                     margin-top: 20px;
 
 
                     img.img.card-img {
-                        width: 50px;
+                        opacity: .7;
+                        filter: grayscale(20%);
                     }
                 }
                 .card-body {
@@ -73,8 +72,8 @@ div#experience.section {
                         }
                     }
                     p.jobtitle {
-                        margin-bottom: 0;
-                        font-weight: bold;
+                        margin-bottom: 10px;
+                        font-weight: 500;
                     }
                     span.date {
                         color: $dark-gray;

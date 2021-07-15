@@ -9,11 +9,7 @@ import {
     Container,
     Card,
     CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText,
-  CardLink
+  CardBody
 } from "reactstrap";
 
 import OwlCarousel from 'react-owl-carousel';
@@ -57,7 +53,7 @@ const Employment = () => {
                                         
 
                                                 <div className="item">
-                                                    <Card>
+                                                    <Card id="experience-card">
                                                         <div className="img-container">
                                                     <CardImg className='img' src={require("../../assets/img/experience/" + job.logo)} alt={job.company + " logo"} style={{ width: '100%' }} /></div>
                                                     <CardBody>

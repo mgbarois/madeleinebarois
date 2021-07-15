@@ -35,9 +35,9 @@
   }
 
   &[data-background-color="blue"]{
-      background-image: linear-gradient(to top, rgba(78, 236, 202, 0.1), rgba(0, 238, 198, 0.5)),(url("../../img/jellyfish.jpg"));
-      background-color: $info-color;
-      background-size: cover;
+    background-image: linear-gradient(to top, rgba(78, 236, 202, 0.1), rgba(0, 238, 198, 0.5)),(url("../../img/jellyfish.jpg"));
+    background-color: $info-color;
+    background-size: cover;
   }
 
   &[data-background-color="green"]{
