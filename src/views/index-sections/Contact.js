@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+
 // reactstrap components
 import {
   Button,
@@ -25,25 +27,46 @@ function Contact() {
   const [nameFocus, setNameFocus] = React.useState(false);
   const [messageFocus, setMessageFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  const { t } = useTranslation();
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    fetch("https://formsubmit.co/55437be6999e28ecd2e8317f04c071c3",
+      {
+        method: "post",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message
+        })
+      }
+    )
+  }
+
   return (
     <>
       <div
         className="section section-contact"
         id="contact"
-        // style={{
-        //   backgroundColor: '#1C1D21'
+      // style={{
+      //   backgroundColor: '#1C1D21'
 
-        //     // backgroundImage: "url(" + require("assets/img/jonathan-borba-3o5oUjrD90w-unsplash_grad_rot.png") + ")",
-        //     // backgroundSize: "cover",
-        //     // backgroundPosition: "bottom center",
-        //     // minHeight: "700px"
-        // }}
-        // style={{
-        //   backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")",
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "top center",
-        //   minHeight: "700px",
-        // }}
+      //     // backgroundImage: "url(" + require("assets/img/jonathan-borba-3o5oUjrD90w-unsplash_grad_rot.png") + ")",
+      //     // backgroundSize: "cover",
+      //     // backgroundPosition: "bottom center",
+      //     // minHeight: "700px"
+      // }}
+      // style={{
+      //   backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "top center",
+      //   minHeight: "700px",
+      // }}
       >
         <Container>
           <Row>
@@ -51,7 +74,7 @@ function Contact() {
               <Form action="" className="form" method="">
                 <CardHeader className="text-center">
                   <CardTitle className="title-up" tag="h3">
-                    Contact Me
+                    {t('contact.contactme')}
                   </CardTitle>
                   <div className="social-line">
                     {/* <Button
@@ -69,7 +92,7 @@ function Contact() {
                       onClick={(e) => e.preventDefault()}
                       size="lg"
                     >
-                      <div style={{display:"flex", alignItems:"center", justifyContent:"center", height:"100%"}}>
+                      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%" }}>
                         <i className="fas fa-envelope"></i>
                       </div>
 
@@ -96,10 +119,12 @@ function Contact() {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Name..."
+                      placeholder={t('contact.name')}
+                      value={name}
                       type="text"
                       onFocus={() => setNameFocus(true)}
                       onBlur={() => setNameFocus(false)}
+                      onChange={(e) => setName(e.target.value)}
                     ></Input>
                   </InputGroup>
                   <InputGroup
@@ -113,10 +138,12 @@ function Contact() {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Email..."
+                      placeholder={t('contact.email')}
                       type="text"
+                      value={email}
                       onFocus={() => setEmailFocus(true)}
                       onBlur={() => setEmailFocus(false)}
+                      onChange={(e) => setEmail(e.target.value)}
                     ></Input>
                   </InputGroup>
                   <InputGroup
@@ -130,11 +157,12 @@ function Contact() {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Message..."
+                      placeholder={t('contact.message')}
                       type="textarea"
-
+                      value={message}
                       onFocus={() => setMessageFocus(true)}
                       onBlur={() => setMessageFocus(false)}
+                      onChange={(e) => setMessage(e.target.value)}
                     ></Input>
                   </InputGroup>
                 </CardBody>
@@ -142,9 +170,9 @@ function Contact() {
                   <Button
                     className="btn-neutral btn-round"
                     color="info"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
+                    onClick={(e) => onFormSubmit(e)}
                     size="lg"
+                    // disabled
                   >
                     Send
                   </Button>
