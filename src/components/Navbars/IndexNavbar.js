@@ -110,7 +110,7 @@ function IndexNavbar() {
                       .scrollIntoView();
                   }}>
                     <i className="now-ui-icons users_circle-08"></i>
-                    About Me
+                    {t('indexNavBar.aboutme')}
                   </DropdownItem>
                   <DropdownItem tag={Link} onClick={(e) => {
                     e.preventDefault();
@@ -119,7 +119,7 @@ function IndexNavbar() {
                       .scrollIntoView();
                   }}>
                     <i className="now-ui-icons ui-2_settings-90"></i>
-                    Skillset
+                    {t('indexNavBar.skillset')}
                   </DropdownItem>
                   <DropdownItem tag={Link} onClick={(e) => {
                     e.preventDefault();
@@ -128,7 +128,7 @@ function IndexNavbar() {
                       .scrollIntoView();
                   }}>
                     <i className="now-ui-icons education_hat mr-1"></i>
-                    Education
+                    {t('indexNavBar.education')}
                   </DropdownItem>
                   <DropdownItem tag={Link} onClick={(e) => {
                     e.preventDefault();
@@ -137,7 +137,7 @@ function IndexNavbar() {
                       .scrollIntoView();
                   }}>
                     <i className="now-ui-icons business_briefcase-24 mr-1"></i>
-                    Experience
+                    {t('indexNavBar.experience')}
                   </DropdownItem>
                   <DropdownItem tag={Link} onClick={(e) => {
                     e.preventDefault();
@@ -146,7 +146,7 @@ function IndexNavbar() {
                       .scrollIntoView();
                   }}>
                     <i className="now-ui-icons media-1_album"></i>
-                    Portfolio
+                    {t('indexNavBar.portfolio')}
                   </DropdownItem>
                   <DropdownItem tag={Link} onClick={(e) => {
                     e.preventDefault();
@@ -155,7 +155,7 @@ function IndexNavbar() {
                       .scrollIntoView();
                   }}>
                     <i className="now-ui-icons ui-1_send"></i>
-                    Contact
+                    {t('indexNavBar.contact')}
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

@@ -24,28 +24,33 @@
     background-image: linear-gradient(to top, rgb(9, 49, 54), rgba(255,255,255, 1));
     position: top center;
 
-    .codepen {
+    .codepens {
 
         .thumbnail {
-            width: 300px;
-            height: 160px;
-            margin-bottom: 100px;
+            width: 100%;
+            height: 600px;
+            margin-bottom: 2rem;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
         }               
 
-        .thumbnail iframe {
-            width: 900px;
-            height: 480px;
+        // .thumbnail iframe {
+        //     width: 900px;
+        //     height: 480px;
 
-            -webkit-transform-origin: 0 0;
-            -moz-transform-origin: 0 0;
-            transform-origin: 0 0;
+        //     -webkit-transform-origin: 0 0;
+        //     -moz-transform-origin: 0 0;
+        //     transform-origin: 0 0;
 
-            -webkit-transform:  scale(0.5, 0.5);
-            -moz-transform:  scale(0.5, 0.5);
-            transform:  scale(0.5, 0.5);
+        //     -webkit-transform:  scale(0.5, 0.5);
+        //     -moz-transform:  scale(0.5, 0.5);
+        //     transform:  scale(0.5, 0.5);
 
-            overflow: hidden;
-        }
+        //     overflow: hidden;
+        // }
 
     }
 

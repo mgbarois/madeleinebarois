@@ -70,61 +70,8 @@
             }
         }
     }
-
-    
 }
 
-.skills-soft {
-    border: solid 1px;
-}
-
-.skills-soft ul {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-  }
-  .skills-soft ul li {
-    position: relative;
-  }
-  .skills-soft ul li:hover svg .cbar {
-    stroke: #e07a5f;
-    stroke-width: 4px;
-  }
-  .skills-soft ul li:hover span, .skills-soft ul li:hover small {
-    transform: scale(1.2);
-  }
-  .skills-soft ul li p {
-    font-size: 14px;
-    margin-bottom: 0px;
-  }
-  .skills-soft ul li svg {
-    width: 95%;
-    fill: transparent;
-    transform: rotate(-90deg);
-  }
-  .skills-soft ul li svg circle {
-    stroke-width: 1px;
-    stroke: #cdcdcd;
-  }
-  .skills-soft ul li svg .cbar {
-    stroke-width: 3px;
-    stroke: #46a598;
-    stroke-linecap: round;
-  }
-  .skills-soft ul li span, .skills-soft ul li small {
-    position: absolute;
-    display: block;
-    width: 100%;
-    top: 52%;
-    transition-duration: 0.3s;
-    font-size: 12px;
-  }
-  .skills-soft ul li span {
-    top: 55%;
-  }
-  .skills-soft ul li small {
-    display: none;
-  }
 
 @media screen and (max-width:767px) {
     .skill-stack {
@@ -133,6 +80,11 @@
         padding-top: 0;
         .skills-col {
             width: 100%;
+            .loc-tasks {
+              margin-top: 3rem;
+          }
         }
-    }   
+    }
+
+    
 }

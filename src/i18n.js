@@ -23,6 +23,12 @@ i18n
         translation: {
           indexNavBar: {
             myProfile: 'My Profile',
+            aboutme: "About Me",
+            skillset: "Skillset",
+            education: "Education",
+            experience: "Experience",
+            portfolio: "Portfolio",
+            contact: "Contact",
             linkedinLink: "https://www.linkedin.com/in/madeleine-barois/en",
             linkedinTooltip: "Follow me on Linkedin",
             githubTooltip: "Follow me on GitHub",
@@ -36,7 +42,7 @@ i18n
           },
           aboutMe: {
             title: 'ABOUT ME',
-            text: "Hi there, welcome to my website! I'm a self-taught web developer with a background in linguistics. I discovered my love for coding working as a localization engineer in the language services industry, and have since transitioned into full-stack web developement. I'm passionate about creating, learning new things, and applying my multidisciplinary skillset to analyze and solve problems.",
+            text: "Hi there, welcome to my website! I'm a web developer with a background in linguistics. I discovered my love for coding working as a localization engineer in the language services industry, and have since transitioned into full-stack web development. I'm passionate about creating, learning new things, and applying my multidisciplinary skillset to analyze and solve problems.",
             myPictureAlt: "Madeleine Barois",
             domEngName: "Analysis and problem solving",
             domEngAlt: "Engineering",
@@ -52,13 +58,20 @@ i18n
             dev: "Development",
             loc: "Localization & Languages",
             other: "Other",
+            locSkillsTitle :"Localization Tools:",
+            locTasksTitle :"Localization Tasks:",
             locTasks : [
-              "File manipulation/processing",
+              "Pre- and post- processing of complex file types",
               "CAT tool configuration",
               "Development & management of SDL API connectors/plugins",
               "Technical support, troubleshooting, debugging",
               "Process documentation",
             ],
+            humanLangsTitle :"Human languages:",
+            eng: "English",
+            fra: "French",
+            spa: "Spanish",
+            deu: "German",
             jira: "Jira Ticketing System",
             confluence: "Confluence",
             adobe: "Adobe Suite",
@@ -163,7 +176,14 @@ i18n
             title: "PORTFOLIO"
           },
           contact: {
-
+            contactme: "Contact Me",
+            name: "Name...",
+            email: "Email...",
+            message: "Message...",
+            send: "Send"
+          },
+          footer: {
+            by: "by"
           },
           month: {
             jan: "January",
@@ -185,6 +205,12 @@ i18n
         translation: {
           indexNavBar: {
             myProfile: 'Mon Profil',
+            aboutme: "À propos",
+            skillset: "Compétences",
+            education: "Formation",
+            experience: "Expérience",
+            portfolio: "Portfolio",
+            contact: "Contact",
             linkedinLink: "https://www.linkedin.com/in/madeleine-barois/fr",
             linkedinTooltip: "Suivez-moi sur Linkedin",
             githubTooltip: "Suivez-moi sur GitHub",
@@ -194,11 +220,11 @@ i18n
             langs: "Langues",
           },
           indexHeader: {
-            subtitle: 'Développeuse web & Ingénieure pour la Localisation'
+            subtitle: 'Développeuse web & Ingénieure pour la localisation'
           },
           aboutMe: {
-            title: 'A PROPOS DE MOI',
-            text: "Bonjour, bienvenue sur mon site web ! Je suis un développeur web avec une formation en linguistique. J'ai découvert ma passion pour le codage en travaillant comme ingénieur en localisation dans le secteur des services linguistiques, et je me suis depuis reconvertie dans le développement web full-stack. Je suis passionnée par la création, l'apprentissage de nouvelles choses et l'application de mes compétences multidisciplinaires pour analyser et résoudre des problèmes.",
+            title: 'À PROPOS',
+            text: "Bonjour, bienvenue sur mon site web ! Je suis une développeuse Web avec une formation en linguistique. J'ai découvert ma passion pour le codage en travaillant comme ingénieure en localisation dans le secteur des services linguistiques, et je me suis depuis reconvertie dans le développement Web full-stack. Je suis passionnée par la création, l'apprentissage de nouvelles choses et l'application de mes compétences pluridisciplinaires pour analyser et résoudre des problèmes.",
             myPictureAlt: "Madeleine Barois",
             domEngName: "Analyse et résolution de problèmes",
             domEngAlt: "Ingénierie",
@@ -206,14 +232,16 @@ i18n
             domWebAlt: "Web",
             domLangName: "Connaissances linguistiques et culturelles",
             domLangAlt: "Langues",
-            domDesName: "Créativité et compétences design",
+            domDesName: "Créativité et compétences en design",
             domDesAlt: "Design",
           },
           skills: {
             title: "COMPÉTENCES",
             dev: "Développement",
             loc: "Localisation & Langues",
-            other: "Other",
+            other: "Autres",
+            locSkillsTitle :"Outils pour la localisation :",
+            locTasksTitle :"Tâches de localisation:",
             locTasks : [
               "Manipulation/traitement de fichiers",
               "Configuration des outils de TAO",
@@ -221,6 +249,11 @@ i18n
               "Assistance technique, dépannage, débogage",
               "Documentation des processus",
             ],
+            humanLangsTitle : "Langues humaines :",
+            eng: "Anglais",
+            fra: "Français",
+            spa: "Espagnol",
+            deu: "Allemand",
             jira: "Sytème de tickets Jira",
             confluence: "Outil de documentation Confluence",
             adobe: "Suite Adobe",
@@ -264,7 +297,7 @@ i18n
                 logo: "acolad.png"
               },
               {
-                title: "Apprentie Ingénieure pour la localization",
+                title: "Apprentie ingénieure pour la localisation",
                 company: "Telelingua International",
                 location: "Paris, France",
                 dates: "2017-2018",
@@ -288,7 +321,7 @@ i18n
                 logo: "tcloc_logo.png"
               },
               {
-                title: "Chef de projet web",
+                title: "Chef de projet Web",
                 location: "Strasbourg, France",
                 company: "Chacun Son Court",
                 dates: "2016-2017",
@@ -298,7 +331,7 @@ i18n
               {
                 title: "Enseignante d'anglais et de français",
                 company: "Berlitz",
-                location: "Cologne, Germany & Strasbourg, France",
+                location: "Cologne, Allemagne & Strasbourg, France",
                 dates: "2014-2016",
                 link: "https://www.acolad.com/",
                 logo: "berlitz_logo.jpg"
@@ -313,7 +346,7 @@ i18n
               },
               {
                 title: "Guide touristique multilingue",
-                company: "UBC Museum of Anthropology",
+                company: "Musée d'anthropologie de UBC",
                 location: "Vancouver, Canada",
                 dates: "2012-2014",
                 link: "https://www.acolad.com/",
@@ -325,7 +358,14 @@ i18n
             title: "PORTFOLIO"
           },
           contact: {
-
+            contactme: "Contactez-moi",
+            name: "Nom...",
+            email: "Email...",
+            message: "Message...",
+            send: "Envoyer"
+          },
+          footer: {
+            by: "par"
           },
           month: {
             jan: "Janvier",

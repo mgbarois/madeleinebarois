@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 // reactstrap components
 import {
@@ -38,6 +39,8 @@ const ReplItem = ({ id, name, link }) => {
 
 const Portfolio = () => {
     const [pills, setPills] = React.useState("1");
+    const { t } = useTranslation();
+
     //     React.useEffect(() => {
     //     document.body.classList.add("profile-page");
     //     document.body.classList.add("sidebar-collapse");
@@ -55,7 +58,7 @@ const Portfolio = () => {
                 <Container className='profile-page'>
                     <Row>
                         <Col className="ml-auto mr-auto" md="12">
-                            <h3 className="title text-center">Portfolio</h3>
+                            <h3 className="title text-center">{t('portfolio.title')}</h3>
                             <div className="nav-align-center">
                                 <Nav
                                     className="nav-pills-primary nav-pills-just-icons"
@@ -116,8 +119,8 @@ const Portfolio = () => {
                             </TabPane>
                             <TabPane tabId="pills2">
                                 <Col className="ml-auto mr-auto" md="10">
-                                    <Row className="collections codepen">
-                                        <Col md="6">
+                                    <Row className="collections codepens">
+                                        <Col lg="6" md="12">
                                             <div class="thumbnail">
                                                 <iframe className='img-raised' scrolling="no" title="Random Quote Machine" src="https://codepen.io/mgbarois/embed/ExWPbWZ?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                                                     See the Pen <a href='https://codepen.io/mgbarois/pen/ExWPbWZ'>Random Quote Machine</a> by mgbarois
@@ -132,7 +135,7 @@ const Portfolio = () => {
                                                 </iframe>
                                             </div>
                                         </Col>
-                                        <Col md="6">
+                                        <Col lg="6" md="12">
                                             <div class="thumbnail">
 
                                                 <iframe className='img-raised' scrolling="no" title="25 + 5 Clock" src="https://codepen.io/mgbarois/embed/yLMJOKE?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
@@ -148,7 +151,7 @@ const Portfolio = () => {
                                                 </iframe>
                                             </div>
                                         </Col>
-                                        <Col md="6">
+                                        <Col lg="6" md="12">
                                             <div class="thumbnail">
 
                                                 <iframe className='img-raised' scrolling="no" title="Drum Machine" src="https://codepen.io/mgbarois/embed/NWpNaXX?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">

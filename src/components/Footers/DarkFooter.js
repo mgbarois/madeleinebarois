@@ -1,10 +1,13 @@
 /*eslint-disable*/
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 // reactstrap components
 import { Container } from "reactstrap";
 
 function DarkFooter() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer" data-background-color="black">
       <Container>
@@ -33,7 +36,7 @@ function DarkFooter() {
         </nav>
         <div className="copyright" id="copyright">
           © {new Date().getFullYear()}, {" "}
-          Madeleine Barois. Template by{" "}
+          Madeleine Barois. Template {t('footer.by')}{" "}
           <a
             href="https://www.creative-tim.com?ref=nukr-dark-footer"
             target="_blank"
