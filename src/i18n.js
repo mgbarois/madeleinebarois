@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import React from "react";
 
 i18n
   // detect user language
@@ -180,7 +181,12 @@ i18n
             name: "Name...",
             email: "Email...",
             message: "Message...",
-            send: "Send"
+            send: "Send",
+            success: "Success",
+            error: "Error",
+            successMessage: "Thanks for your message! It has been successfully sent and I will get back to you shortly.",
+            errorMessage: "Oops, something went wrong there. Please make sure you have input your name, messsage, and a valid e-mail address. Should problems persist, please contact me on ",
+
           },
           footer: {
             by: "by"
@@ -362,7 +368,11 @@ i18n
             name: "Nom...",
             email: "Email...",
             message: "Message...",
-            send: "Envoyer"
+            send: "Envoyer",
+            success: "Envoi réussi",
+            error: "Erreur",
+            successMessage: "Merci pour votre message ! Il a bien été envoyé et je vous recontacterai dès que possible.",
+            errorMessage: "Zut, une erreur s'est produite. Veuillez vérifier que vous avez bien saisi votre nom, votre message, et une adresse e-mail valide. Si vous éprouvez toujours des problèmes, veuillez me contacter sur ",
           },
           footer: {
             by: "par"

@@ -17,6 +17,7 @@ import {
   InputGroup,
   Container,
   Row,
+  Modal
 } from "reactstrap";
 
 import './Contact.scss';
@@ -30,23 +31,34 @@ function Contact() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
+  const [modalLive, setModalLive] = React.useState(false);
+  const [sendSuccess, setSendSuccess] = React.useState(false);
 
   const { t } = useTranslation();
 
+  const openModal = (success) => {
+    setSendSuccess(success);
+    setModalLive(true);
+    setName("");
+    setEmail("");
+    setMessage("");
+  }
   const onFormSubmit = (e) => {
     e.preventDefault();
-    fetch("https://formsubmit.co/55437be6999e28ecd2e8317f04c071c3",
-      {
-        method: "post",
-        headers: { "Content-type": "application/json" },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message
-        })
-      }
-    )
+    fetch("https://formsubmit.co/55437be6999e28ecd2e8317f04c071c3", {
+      method: "post",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        message: message
+      })
+    })
+      .then(openModal(true))
+      .catch(openModal(false));
   }
+
+
 
   return (
     <>
@@ -172,7 +184,7 @@ function Contact() {
                     color="info"
                     onClick={(e) => onFormSubmit(e)}
                     size="lg"
-                    // disabled
+                  // disabled
                   >
                     Send
                   </Button>
@@ -193,6 +205,38 @@ function Contact() {
             </Button>
           </div> */}
         </Container>
+        <Modal toggle={() => setModalLive(false)} isOpen={modalLive}>
+          <div className="modal-header">
+            <h5 className="modal-title" id="exampleModalLiveLabel">
+              {sendSuccess ? t("contact.success") : t("contact.error")}
+            </h5>
+            <button
+              aria-label="Close"
+              className="close"
+              type="button"
+              onClick={() => setModalLive(false)}
+            >
+              <span aria-hidden={true} style={{ color: sendSuccess ? "green" : "red" }}>
+                {sendSuccess ? (<i class="fas fa-check" />) : "x" }
+              </span>
+            </button>
+          </div>
+          <div className="modal-body">
+            <p>
+              {sendSuccess ? t("contact.successMessage") : t("contact.errorMessage")}
+              {sendSuccess ? "" : <a href="https://www.linkedin.com/in/madeleine-barois/">LinkedIn.</a>}
+            </p>
+          </div>
+          <div className="modal-footer">
+            <Button
+              color="secondary"
+              type="button"
+              onClick={() => setModalLive(false)}
+            >
+              Close
+            </Button>
+          </div>
+        </Modal>
       </div>
     </>
   );
