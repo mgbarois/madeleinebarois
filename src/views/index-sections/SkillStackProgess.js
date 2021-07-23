@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 import {
     Progress
@@ -9,8 +9,6 @@ import {
 import './SkillStackProgress.scss';
 
 function SkillStackProgress() {
-
-    const { t } = useTranslation();
 
     const skillsCol1 = [
         {
