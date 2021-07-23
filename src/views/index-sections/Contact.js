@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 // reactstrap components
@@ -54,8 +53,15 @@ function Contact() {
         message: message
       })
     })
-      .then(openModal(true))
-      .catch(openModal(false));
+      .then(data => 
+        {
+          console.log("Fetch data:", data)
+          openModal(true);
+        })
+      .catch(err => {
+        console.log("Fetch error:", err);
+        openModal(false);
+      })
   }
 
 
