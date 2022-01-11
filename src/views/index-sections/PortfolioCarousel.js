@@ -14,10 +14,9 @@ import './PortfolioCarousel.scss'
 
 const items = [
   {
-    src: "https://blogdown-poc.netlify.app/",
+    src: "https://nadagabon.org/",
     title: "Nsombou Abalghe-Dzal Association Website",
-    tech: "blogdown, scss",
-    githubLink: "https://github.com/mgbarois/nada-gabon"
+    tech: "blogdown, scss"
   },
   {
     src: "https://mgbarois.github.io/german-cheat-sheet/",
